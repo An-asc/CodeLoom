@@ -1,30 +1,36 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheNavbar from './components/TheNavbar.vue'
-import PricingTable from './components/PricingTable.vue'
-import ServiceCard from './components/ServiceCard.vue'
-import TheFooter from './components/TheFooter.vue'
-</script>
-
 <template>
-  <TheNavbar />
-  <HelloWorld msg="Mi sitio con Vite + Vue" />
-  <ServiceCard />
-  <PricingTable />
-  <TheFooter />
+  <div id="app">
+    <TheNavbar />
+    <main class="main-content">
+      <router-view />
+    </main>
+    <TheFooter />
+  </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script>
+import TheNavbar from './components/TheNavbar.vue'
+import TheFooter from './components/TheFooter.vue'
+
+export default {
+  name: 'App',
+  components: {
+    TheNavbar,
+    TheFooter
+  }
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+</script>
+
+<style>
+@import './assets/css/main.css';
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.main-content {
+  flex: 1;
 }
 </style>
