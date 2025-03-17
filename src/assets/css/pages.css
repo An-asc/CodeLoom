@@ -1,4 +1,64 @@
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
 
+.hero-text {
+  flex: 1;
+}
+
+.hero-svg {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube-svg {
+  width: 100%;
+  max-width: 300px;
+  -webkit-filter: drop-shadow(0 0 10px rgba(66, 198, 255, 0.3));
+          filter: drop-shadow(0 0 10px rgba(66, 198, 255, 0.3));
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+  }
+  
+  .hero-text {
+    order: 1;
+    text-align: center;
+  }
+  
+  .hero-svg {
+    order: 0;
+    margin-bottom: 30px;
+  }
+}
 /* Estilos de la sección de características */
 .features-grid {
   display: grid;
@@ -41,10 +101,6 @@
 }
 
 /* Estilos de la sección de testimonios */
-.testimonials-section {
-  background-color: var(--secondary-bg);
-}
-
 .testimonials-carousel {
   display: flex;
   gap: 30px;

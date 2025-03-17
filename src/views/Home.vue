@@ -54,7 +54,7 @@
     </section>
 
     <!-- Sección de testimonios -->
-    <section class="testimonials-section ">
+    <section class="cta-section ">
       <div class="wrapper">
         <div>
           <h2>What Our Users Say</h2>
@@ -142,7 +142,7 @@
 
     <!-- Sección de CTA final -->
     <section class="cta-section">
-      <div class="container">
+      <div class="container wrapper">
         <div class="cta-content">
           <h2 class="cta-title">Ready to Transform Your Video Editing?</h2>
           <p class="cta-description">

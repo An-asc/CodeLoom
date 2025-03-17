@@ -1,10 +1,11 @@
 /* Root Variables */
 :root {
-  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Montserrat", sans-serif;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Montserrat",
+    sans-serif;
   --shadow: 0px 2px 16px rgba(0, 0, 0, 0.42);
   --border-radius: 16px;
   --border-radius-imgs: 24px;
-  
+
   /* Colors */
   --primary: #3b436b;
   --primary-bg: #ade6ff;
@@ -33,7 +34,9 @@
 }
 
 /* Reseteo y configuración básica */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -53,7 +56,7 @@ h1,
 h2,
 h3,
 h4,
-h5{
+h5 {
   line-height: var(--line-height);
   text-transform: none;
   max-width: 26ch;
@@ -61,9 +64,11 @@ h5{
 
 h1 {
   font-size: var(--font-size-h1);
+  margin: 0 0 20px;
+  line-height: var(--line-height);
 }
 
-h2{
+h2 {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -81,12 +86,12 @@ h4 {
   font-size: var(--font-size-h4);
 }
 
-h5{
+h5 {
   font-size: var(--font-size-h5);
 }
 
 p,
-li{
+li {
   font-size: var(--font-size-p);
   width: min(100%, 70ch);
   margin-bottom: 1rem;
@@ -106,13 +111,13 @@ ol li {
   color: var(--background);
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--accion);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   font-weight: 700;
 
-  &:hover{
+  &:hover {
     text-decoration: underline;
     text-decoration-thickness: 2.4px;
     text-underline-offset: 0.4em;
@@ -183,7 +188,7 @@ hr {
   justify-content: space-between;
   align-items: flex-start;
   padding: 8em 0 4em;
-  
+
   & > div {
     position: relative;
     width: min(100%, 376px);
@@ -199,9 +204,11 @@ hr {
   bottom: 8rem;
   right: 12px;
   z-index: 100;
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s 6 alternate-reverse both;
-  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s 6 alternate-reverse both;
-  transition: all .2s ease-in-out;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    0.5s 6 alternate-reverse both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s 6
+    alternate-reverse both;
+  transition: all 0.2s ease-in-out;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -209,8 +216,8 @@ hr {
 }
 
 .boton-whatsapp:hover {
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, .7));
-  filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, .7));
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, 0.7));
+  filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, 0.7));
   transform: scale(1.05);
 }
 
@@ -232,7 +239,6 @@ hr {
     transform: scale(1.1);
   }
 }
-
 
 /* scroll top */
 .boton-up {
@@ -270,7 +276,7 @@ hr {
 /* Seccion con fondo full width */
 .bg_full {
   background-color: var(--crystal-clear);
-    box-shadow: 0 0 0 100vmax var(--crystal-clear);
-    -webkit-clip-path: inset(0 -100vmax);
-            clip-path: inset(0 -100vmax);
+  box-shadow: 0 0 0 100vmax var(--crystal-clear);
+  -webkit-clip-path: inset(0 -100vmax);
+  clip-path: inset(0 -100vmax);
 }
