@@ -1,0 +1,373 @@
+
+/* Estilos de la sección de características */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: var(--primary-bg);
+  border-radius: 10px;
+  padding: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  background: rgb(232, 58, 149);
+  background: linear-gradient(
+    8deg,
+    rgba(232, 58, 149, 1) 0%,
+    rgba(66, 198, 255, 1) 41%,
+    rgba(255, 187, 51, 1) 82%
+  );
+}
+
+.feature-icon {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.feature-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.feature-description {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Estilos de la sección de testimonios */
+.testimonials-section {
+  background-color: var(--secondary-bg);
+}
+
+.testimonials-carousel {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(66, 198, 255, 0.5) transparent;
+}
+
+.testimonials-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.testimonials-carousel::-webkit-scrollbar-thumb {
+  background: rgba(66, 198, 255, 0.5);
+  border-radius: 3px;
+}
+
+.testimonial-card {
+  min-width: 350px;
+  background-color: var(--primary);
+  border-radius: 10px;
+  padding: 30px;
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-image {
+  margin-right: 15px;
+}
+
+.image-placeholder {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to right, #e83a95, #42c6ff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.author-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.author-role {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Estilos de la sección de precios */
+.pricing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(24, 32, 70, 0.6);
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #42c6ff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #42c6ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.pricing-toggle span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.pricing-toggle span.active {
+  color: white;
+  font-weight: 600;
+}
+
+.save-badge {
+  background-color: #e83a95;
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.pricing-card {
+  background-color: rgba(24, 32, 70, 0.6);
+  border-radius: 10px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(66, 198, 255, 0.1);
+}
+
+.plan-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.plan-description {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.pricing-price {
+  margin-bottom: 30px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.price-period {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.price-note {
+  font-size: 14px;
+  color: #42c6ff;
+  margin-top: 5px;
+}
+
+.pricing-features {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.pricing-features ul {
+  padding-left: 20px;
+}
+
+.pricing-features li {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.pricing-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 2px solid #42c6ff;
+  background-color: transparent;
+  color: #42c6ff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pricing-button:hover {
+  background-color: rgba(66, 198, 255, 0.1);
+}
+
+.pricing-button.primary {
+  background: linear-gradient(to right, #e83a95, #42c6ff);
+  border: none;
+  color: white;
+}
+
+.pricing-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(66, 198, 255, 0.3);
+}
+
+/* Estilos de la sección CTA */
+.cta-section {
+  background: linear-gradient(
+    135deg,
+    rgba(232, 58, 149, 0.1),
+    rgba(66, 198, 255, 0.1)
+  );
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cta-description {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-button.primary {
+  background: linear-gradient(to right, #e83a95, #42c6ff);
+  border: none;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(66, 198, 255, 0.3);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.cta-button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 30px;
+  }
+
+  .testimonials-carousel {
+    flex-direction: column;
+  }
+
+  .testimonial-card {
+    min-width: auto;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

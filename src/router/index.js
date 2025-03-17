@@ -8,34 +8,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/features',
-    name: 'Features',
-    component: () => import('../views/Features.vue')
-  },
-  {
     path: '/pricing',
     name: 'Pricing',
     component: () => import('../views/Pricing.vue')
-  },
-  {
-    path: '/tutorials',
-    name: 'Tutorials',
-    component: () => import('../views/Tutorials.vue')
-  },
-  {
-    path: '/blog',
-    name: 'Blog',
-    component: () => import('../views/Blog.vue')
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import('../views/Login.vue')
-  },
-  {
-    path: '/signup',
-    name: 'Signup',
-    component: () => import('../views/Signup.vue')
   },
   {
     path: '/:pathMatch(.*)*',

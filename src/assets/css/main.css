@@ -5,9 +5,11 @@
   --border-radius: 16px;
   --border-radius-imgs: 24px;
   
-  --primary-bg: #0a0e29;
-  --secondary-bg: #182046;
-  --text-color: #ffffff;
+  /* Colors */
+  --primary: #3b436b;
+  --primary-bg: #ade6ff;
+  --secondary-bg: #f8e3e8;
+  --text-color: #000000;
   --accent-color-pink: #e83a95;
   --accent-color-blue: #42c6ff;
   --accent-color-yellow: #ffbb33;
@@ -21,7 +23,7 @@
   /* Font sizes */
   --font-size-h1: clamp(2.5rem, 2.208rem + 1.46vw, 3.375rem);
   --font-size-h2: clamp(2.25rem, 2rem + 1.25vw, 3rem);
-  --font-size-h3: clamp(1.75rem, 1.667rem + 0.42vw, 2rem);
+  --font-size-h3: clamp(1rem, 1.3rem + 0.42vw, 2rem);
   --font-size-h4: clamp(1.375rem, 1.25rem + 0.63vw, 1.75rem);
   --font-size-h5: clamp(1.25rem, 1.167rem + 0.42vw, 1.5rem);
   --font-size-p: clamp(1.125rem, 1.083rem + 0.21vw, 1.25rem);
@@ -62,8 +64,12 @@ h1 {
 }
 
 h2{
-  color: var(--primary);
-  font-size: var(--font-size-h2);
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #e83a95, #42c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h3 {
