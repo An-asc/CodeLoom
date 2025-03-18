@@ -1,13 +1,12 @@
 <template>
-    <!-- Sección de testimonios -->
-    <section class="cta-section">
+  <!-- Sección de testimonios -->
+  <section class="cta-section">
     <div class="wrapper">
-      
       <h2>Los precios más bajos de el mercado</h2>
       <p>
-        Aquí encontrarás los precios de los servicios más requeridos o puedes 
+        Aquí encontrarás los precios de los servicios más requeridos o puedes
       </p>
-      <div class="testimonials-carousel">
+      <div class="features-grid">
         <div
           class="testimonial-card"
           v-for="(testimonial, index) in testimonials"
@@ -32,13 +31,13 @@
   </section>
   <!-- Sección de precios -->
   <section class="wrapper">
-    <h2>Choose Your Plan</h2>
+    <h2>Tenemos planes perfectos para tí</h2>
     <p class="section-description">
-      Simple, transparent pricing for every level of creator
+      Ahora si no tienes dinero para comprar un sitio web, puedes pagarlo mes a mes sin intéreses anexados
     </p>
 
     <div class="pricing-toggle">
-      <span :class="{ active: !isAnnual }">Monthly</span>
+      <span :class="{ active: !isAnnual }">Mensual</span>
       <label class="switch">
         <input type="checkbox" v-model="isAnnual" />
         <span class="slider round"></span>
@@ -59,7 +58,7 @@
           <h4 class="price">
             ${{ isAnnual ? plan.annualPrice : plan.monthlyPrice }}
             <span class="price-period">{{
-              isAnnual ? "/year" : "/month"
+              isAnnual ? "/Año" : "/Mes"
             }}</span>
           </h4>
           <p class="price-note" v-if="isAnnual">{{ plan.savingsNote }}</p>
@@ -82,74 +81,141 @@
     </div>
   </section>
 
-    <!-- Sección de características -->
-    <section class="wrapper">
-    <div class="section-header">
-      <h2>Features That Make Video Editing Easy</h2>
+  <!-- Sección de características -->
+  <section class="cta-section">
+    <div class="wrapper">
+
+      <h2>Proyectos Destacados</h2>
       <p>
-        Our AI-powered editor gives you professional-quality results without the
-        learning curve
+        Nuestro equipo ha desarrollado soluciones web a medida para diversos
+        clientes en diferentes sectores
       </p>
-    </div>
 
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon">🎬</div>
-        <h3>Auto Edit</h3>
+        <div class="feature-icon">
+          <img
+            src="/src/assets/img/since-logo.avif"
+            width="200"
+            height="150"
+            alt="Logo de la empresa Since"
+          />
+        </div>
+        <h3>'Since' - Agencia de Marketing Digital</h3>
         <p>
-          Let our AI analyze your footage and create a first cut automatically
+          El proyecto es un sitio web corporativo desarrollado con Jekyll que
+          incluye múltiples páginas (inicio, nosotros, servicios, contacto) con
+          un diseño moderno y atractivo.
         </p>
+        <a href="https://construccionesgarcia.com" target="_blank"
+          >Ver proyecto</a
+        >
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">🔊</div>
-        <h3>Audio Enhancement</h3>
-        <p>Clear background noise and enhance voice quality with one click</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🎨</div>
-        <h3>Color Grading</h3>
-        <p>Apply professional color presets or create your own look</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <h3>Multi-platform</h3>
+        <div class="feature-icon">
+          <img
+            src="/src/assets/img/areas-service-columbus-ohio.avif"
+            width="120"
+            height="100"
+            alt="Logo de la empresa Since"
+          />
+        </div>
+        <h3>Quality Standard Ohio</h3>
         <p>
-          Edit on your computer, tablet, or phone - projects sync automatically
+          Un sitio web profesional, optimizado por SEO para Quality Standard
+          Ohio, una empresa de servicios de limpieza con sede en Columbus, Ohio.
+          El sitio muestra servicios de limpieza residenciales, comerciales y
+          especializados con un diseño limpio y fácil de usar.
         </p>
+        <a href="https://construccionesgarcia.com" target="_blank"
+          >Ver proyecto</a
+        >
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">🚀</div>
-        <h3>Fast Export</h3>
-        <p>Export in multiple formats optimized for any platform</p>
+        <div class="feature-icon">
+          <img src="/src/assets/img/logo.webp" alt="" />
+        </div>
+        <h3>Dra. Tatiana Leal</h3>
+        <p>
+          Este proyecto es un sitio web completo para una clínica de medicina
+          está dirigida por la Dra. Tatiana Leal. El sitio está desarrollado con
+          un enfoque multiling-e (español e inglés) y presenta un diseño moderno
+          y elegante enfocado en servicios médico-estéticos.
+        </p>
+        <a href="https://elrinconrestaurante.com" target="_blank"
+          >Ver proyecto</a
+        >
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">🤖</div>
-        <h3>Voice Commands</h3>
-        <p>Control the editor with your voice for a hands-free experience</p>
+        <div class="feature-icon">
+          <img src="/src/assets/img/logo-mini.avif" alt="" />
+        </div>
+        <h3>Camargo & Fonseca</h3>
+        <p>
+          Este proyecto es un sitio web responsivo para una clínica
+          especializada en trasplante capilar y tratamientos de medicina
+          estética en Bogotá, Colombia. El sitio está diseñado con un enfoque en
+          la conversión, utilizando una estructura clara que guía a los
+          visitantes desde la presentación del problema hasta la solución
+          ofrecida por la clínica.
+        </p>
+        <a href="https://eleganzaboutique.com" target="_blank">Ver proyecto</a>
       </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img
+            src="/src/assets/img/logo-natural.webp"
+            alt=""
+            width="100"
+            height="80"
+          />
+        </div>
+        <h3>Natural One Life</h3>
+        <p>
+          Un sitio web completo para una empresa de tratamientos naturales con
+          células madre. El proyecto incluye un diseño responsivo con múltiples
+          páginas informativas y transaccionales, implementando buenas prácticas
+          SEO y una arquitectura de navegación intuitiva.
+        </p>
+        <a href="https://gymfitcenter.com" target="_blank">Ver proyecto</a>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/src/assets/img/logo-uvlu.avif" alt="" />
+        </div>
+        <h3>IVLU</h3>
+        <p>
+          Desarrollo de un sitio web completo para IVLU, una clínica de medicina
+          estética y restauración capilar ubicada en Bogotá, Colombia. El
+          proyecto incluye el diseño y desarrollo de múltiples páginas con
+          información detallada sobre tratamientos especializados, perfiles de
+          especialistas, y políticas de la clínica.
+        </p>
+        <a href="https://academiafuturos.edu" target="_blank">Ver proyecto</a>
+      </div>
+    </div>
     </div>
   </section>
 
   <!-- Sección de CTA final -->
-  <section class="cta-section">
-    <div class="container wrapper">
-      <div class="cta-content">
-        <h2 class="cta-title">Ready to Transform Your Video Editing?</h2>
-        <p class="cta-description">
-          Join thousands of creators who've simplified their workflow with XORA
+    <section class="wrapper two_columns">
+      <div>
+        <h2>¿Listo para transformar tu presencia digital?</h2>
+        <p>
+          Únete a cientos de negocios que han mejorado su imagen online con
+          CodeLoom
         </p>
-        <div class="cta-buttons">
-          <button class="cta-button primary">Start Free Trial</button>
-          <button class="cta-button secondary">Watch Demo</button>
-        </div>
       </div>
-    </div>
-  </section>
+      <div>
+        <button class="cta-button primary">Solicitar Presupuesto</button>
+        <button class="cta-button secondary">Ver Portafolio</button>
+      </div>
+    </section>
 </template>
 
 <script>
@@ -160,69 +226,77 @@ export default {
       isAnnual: false,
       testimonials: [
         {
-          text: "XORA has completely transformed my content creation process. What used to take me hours now takes minutes, and the quality is even better!",
-          name: "Alex Johnson",
-          role: "YouTube Creator",
+          text: "Sitio web atractivo y funcional de una página con todos los elementos esenciales para presentar tu negocio. Ideal para profesionales independientes y pequeñas empresas que buscan presencia digital.",
+          name: "Landing Page",
+          role: "Desde $299",
         },
         {
-          text: "The AI features are mind-blowing. I can focus on creating content while XORA handles the technical editing aspects.",
-          name: "Sarah Williams",
-          role: "Social Media Manager",
+          text: "Página web completa con múltiples secciones, formularios de contacto y elementos interactivos. Perfecto para empresas que buscan una presencia digital profesional y completa.",
+          name: "Sitio Web",
+          role: "Desde $599",
         },
         {
-          text: "As someone with no technical background, I was able to create professional-looking videos on day one. Incredible tool!",
-          name: "Michael Chen",
-          role: "Small Business Owner",
+          text: "Sitio web avanzado con diseño personalizado, animaciones, integración con APIs y funcionalidades a medida. La solución perfecta para empresas que buscan destacarse.",
+          name: "Sitio Web Premium",
+          role: "Desde $999",
+        },
+        {
+          text: "Mejora el posicionamiento de tu sitio con optimización SEO completa. Incluye análisis de palabras clave, optimización de contenido y estructura técnica mejorada.",
+          name: "Optimización SEO y Estructura",
+          role: "Desde $349",
+        },
+        {
+          text: "Tienda online completa con catálogo de productos, carrito de compras, pasarelas de pago y gestión de inventario. Comienza a vender en línea de forma profesional.",
+          name: "Ecommerce",
+          role: "Desde $1299",
         },
       ],
       plans: [
         {
-          name: "Starter",
-          description: "Perfect for beginners and casual creators",
-          monthlyPrice: 9.99,
-          annualPrice: 95.88,
-          savingsNote: "Save $24 compared to monthly",
+          name: "Landing Page",
+          description:
+            "Página web de una sola sección con mantenimiento incluido desde:",
+          monthlyPrice: 12.99,
+          annualPrice: 125.88,
+          savingsNote: "Ahorras $72 comparado con el plan mensual",
           popular: false,
           features: [
-            "Up to 720p export resolution",
-            "5 projects",
-            "Basic AI editing features",
-            "2GB cloud storage",
-            "Standard support",
+            "Diseño a tu medida",
+            "Aprendes a utilizarlo",
+            "Sin clausulas de permanencia",
+            "Actualizaciones mensuales",
           ],
         },
         {
-          name: "Professional",
-          description: "For serious content creators",
-          monthlyPrice: 19.99,
-          annualPrice: 191.88,
-          savingsNote: "Save $48 compared to monthly",
+          name: "Sitio Web",
+          description: "Web completa con múltiples secciones y mantenimiento desde",
+          monthlyPrice: 49.99,
+          annualPrice: 319.88,
+          savingsNote: "Ahorras $120 comparado con el plan mensual",
           popular: true,
           features: [
-            "Up to 4K export resolution",
-            "Unlimited projects",
-            "All AI editing features",
-            "20GB cloud storage",
-            "Priority support",
-            "Remove watermark",
-            "Advanced color grading",
+            "Todo lo de Landing Page",
+            "Formulario de contacto",
+            "Google Analytics",
+            "Actualizaciones semanales",
+            "Soporte prioritario",
+            "Optimización básica SEO",
           ],
         },
         {
-          name: "Enterprise",
-          description: "For teams and businesses",
-          monthlyPrice: 49.99,
-          annualPrice: 479.88,
-          savingsNote: "Save $120 compared to monthly",
+          name: "SEO y Posicionamiento",
+          description: "Solución completa para empresas exigentes que desean tener una poscicion en internet desde",
+          monthlyPrice: 29.99,
+          annualPrice: 280.88,
+          savingsNote: "Ahorras $216 comparado con el plan mensual",
           popular: false,
           features: [
-            "Everything in Professional",
-            "Team collaboration tools",
-            "100GB cloud storage",
-            "API access",
-            "Dedicated account manager",
-            "Custom branding options",
-            "Advanced analytics",
+            "Todo lo del Sitio Web",
+            "Páginas ilimitadas",
+            "Blog integrado",
+            "Integración con redes sociales",
+            "Análisis mensual de rendimiento",
+            "Mantenimiento técnico completo",
           ],
         },
       ],
