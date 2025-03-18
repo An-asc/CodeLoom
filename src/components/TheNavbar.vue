@@ -8,20 +8,19 @@
           <p>CodeLoom</p>
         </div>
         <div class="menu">
-          <a href="#">Pricing</a>
-          <a href="#" class="get-started">Get Started</a>
+          <a href="#">Precios</a>
+          <a href="#" class="get-started">Contáctanos</a>
         </div>
       </nav>
       <div class="hero">
         <div class="hero-content">
           <div class="hero-text">
-            <div class="video-editing">VIDEO EDITING</div>
-            <h1 class="glitch-text" data-text="AMAZINGLY SIMPLE">AMAZINGLY SIMPLE</h1>
+            <div class="video-editing">Desarrollo de Software</div>
+            <h1 class="glitch-text" data-text="AMAZINGLY SIMPLE">Creamos tu página web a tu medida</h1>
             <p>
-              We designed XORA AI Video Editor to be an easy to use, quick to
-              learn and surprisingly powerful.
+              Llevamos tu negocio al siguiente nivel | Optimiza tu negocio con un sitio web.
             </p>
-            <button class="try-it-now">▶ TRY IT NOW</button>
+            <button class="try-it-now">▶ Consulta Gratis!</button>
           </div>
           <div class="hero-svg">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" class="cube-svg">

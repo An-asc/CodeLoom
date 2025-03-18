@@ -352,7 +352,6 @@ input:checked + .slider:before {
     rgba(232, 58, 149, 0.1),
     rgba(66, 198, 255, 0.1)
   );
-  text-align: center;
 }
 
 .cta-content {
