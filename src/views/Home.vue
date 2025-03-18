@@ -216,6 +216,20 @@
         <button class="cta-button secondary">Ver Portafolio</button>
       </div>
     </section>
+
+  <!-- Herramientas -->
+<!-- Herramientas -->
+<section class="herramientas-container">
+  <div class="carrusel">
+    <div v-for="(tool, index) in tools" :key="index" class="imagen">
+      <img :src="tool.image" :alt="tool.name"/>
+    </div>
+    <!-- Duplicar las imágenes para el efecto infinito -->
+    <div v-for="(tool, index) in tools" :key="index + tools.length" class="imagen">
+      <img :src="tool.image" :alt="tool.name"/>
+    </div>
+  </div>
+</section>
 </template>
 
 <script>
@@ -300,6 +314,33 @@ export default {
           ],
         },
       ],
+      // Nuevos datos para el carrusel de herramientas
+      tools: [
+  {
+    name: "HTML",
+    image: "/src/assets/img/html.avif", // Ruta correcta de la imagen
+  },
+  {
+    name: "CSS",
+    image: "/src/assets/img/css.avif", // Ruta correcta de la imagen
+  },
+  {
+    name: "JavaScript",
+    image: "/src/assets/img/js.avif", // Ruta correcta de la imagen
+  },
+  {
+    name: "WordPress",
+    image: "/src/assets/img/wordpress.avif", // Ruta correcta de la imagen
+  },
+  {
+    name: "Vue.js",
+    image: "/src/assets/img/vuejs.avif", // Ruta correcta de la imagen
+  },
+  {
+    name: "Jekyll",
+    image: "/src/assets/img/jekyll.avif", // Ruta correcta de la imagen
+  },
+],
     };
   },
   methods: {
