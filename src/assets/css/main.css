@@ -280,3 +280,9 @@ hr {
   -webkit-clip-path: inset(0 -100vmax);
   clip-path: inset(0 -100vmax);
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -64,6 +64,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
+  margin-top: 1rem;
 }
 
 .feature-card {
@@ -96,6 +97,7 @@
 
   img {
     padding: 1.5rem;
+    box-shadow: none;
   }
 }
 
@@ -415,7 +417,8 @@ background: linear-gradient(90deg, rgba(59,67,107,1) 0%, rgba(227,68,151,1) 26%,
 .carrusel {
   display: flex;
   width: 200%; /* Duplicar el ancho para el efecto infinito */
-  animation: desplazar 20s linear infinite;
+  -webkit-animation: desplazar 20s linear infinite;
+          animation: desplazar 20s linear infinite;
 }
 
 .imagen {
@@ -424,16 +427,27 @@ background: linear-gradient(90deg, rgba(59,67,107,1) 0%, rgba(227,68,151,1) 26%,
   height: 200px; /* Ajusta el tamaño según necesites */
   margin: 0 1rem; /* Espacio entre las imágenes */
   transition: transform 0.3s ease;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); /* Sombreado */
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); /* Sombreado */
 }
 
 .imagen img {
   width: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+  -o-object-fit: cover;
+     object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
 }
 
 .imagen:hover {
   transform: scale(1.2);
+}
+
+@-webkit-keyframes desplazar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes desplazar {
